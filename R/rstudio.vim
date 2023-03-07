@@ -39,3 +39,4 @@ function SendCmdToRStudio(...)
 endfunction
 
 let g:R_bracketed_paste = 0
+let g:R_parenblock = 0
