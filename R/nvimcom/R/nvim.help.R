@@ -15,7 +15,7 @@ nvim.help <- function(topic, w, firstobj, package)
 {
     if(!missing(firstobj) && firstobj != ""){
         objclass <- nvim.getclass(firstobj)
-        if(objclass != "#E#" && objclass != ""){
+        if(objclass[1] != "#E#" && objclass[1] != ""){
             saved.warn <- getOption("warn")
             options(warn = -1)
             on.exit(options(warn = saved.warn))
