@@ -486,9 +486,9 @@ static char *nvimcom_glbnv_line(SEXP *x, const char *xname, const char *curenv, 
                 } else {
                     len = length(ans);
                     // Remove the newline and the \006 delimiters and add the S4 object length
-                    p--; p--; p--; p--;
+                    p--; p--;
                     *p = 0;
-                    snprintf(buf, 127, "\006\006 [%d]\006\n", len);
+                    snprintf(buf, 127, " [%d]\006\n", len);
                     p = nvimcom_strcat(p, buf);
                     if(len > 0){
                         for(int i = 0; i < len; i++){
